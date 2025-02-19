@@ -1,3 +1,5 @@
+import { loadHomeContent } from "./home";
+
 function createHeader() {
     const header = document.createElement("header");
     const nav = document.createElement("nav");
@@ -29,40 +31,7 @@ function createHeader() {
     body.insertAdjacentElement("afterbegin", header);
 }
 
-function loadHomeContent() {
-    const content = document.querySelector(".content");
-    content.innerHTML = `
-        <div class="heading-container">
-            <div class="heading">
-                <h1>Welcome to my Restaurant!</h1>
-            </div>
-        </div>
 
-        <div class="review">
-            <p>My Restaurant has the best porridge! The atmosphere and customer service make you feel like you are
-                sitting in
-                the middle of the woods, eating like a bear! This is exactly the kind of place that I like to return to
-                again and again.</p>
-            <p class="customer">&#8765; Superman!</p>
-        </div>
-
-        <div class="hours-info">
-            <h3 class="hours">Hours</h3>
-            <p class="sunday">Sunday: 8am - 8pm</p>
-            <p class="monday">Monday: 6am - 6pm</p>
-            <p class="tuesday">Tuesday: 6am - 6pm</p>
-            <p class="wednesday">Wednesday: 6am - 6pm</p>
-            <p class="thursday">Thursday: 6am - 10pm</p>
-            <p class="friday">Friday: 6am - 10pm</p>
-            <p class="saturday">Saturday: 8am - 10pm</p>
-        </div>
-
-        <div class="location-container">
-            <h3 class="location">Location</h3>
-            <p class="address">123 Forest Drive, Forestville, Maine</p>
-        </div>
-    `;
-}
 
 function loadMenuContent() {
     const content = document.querySelector(".content");
