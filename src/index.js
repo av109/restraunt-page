@@ -1,3 +1,5 @@
 import "./style.css";
+import { createHeader, loadHomeContent } from "./nav"; // Add a comma between createHeader and loadHomeContent
 
-console.log("working")
+createHeader();
+loadHomeContent(); // Initialize with home content
