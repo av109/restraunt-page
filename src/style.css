@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+    --main-border-color: rgb(48,70,116);
+    --main-border-radius: 30px;
+    --main-padding: 20px 30px;
+    --main-bg-color: rgb(208, 235, 255);
+    --main-text-color: rgb(97, 91, 91);
+    --header-bg-color: rgba(87,162,194, 0.4);
+}
 
 * {
     margin: 0;
@@ -20,9 +28,8 @@ body {
 }
 
 /* header part begins  */
-
-header{
-    background-color: rgba(87,162,194, 0.4);
+header {
+    background-color: var(--header-bg-color);
     width: 100%;
 }
 
@@ -33,131 +40,93 @@ nav {
     gap: 20px;
 }
 
-nav>button {
+nav > button {
     padding: 5px 10px;
     border-radius: 5px;
     border-style: none;
     border: 1px solid rgb(122, 158, 189);
-    background-color: rgb(208, 235, 255);
-    color: rgb(97, 91, 91);
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
 }
 
-nav>button:hover {
+nav > button:hover {
     cursor: pointer;
 }
 /* header part ends  */
 
 /* Content part begins */
-.content{
-    margin-top: 30px;
-    border: 1px solid rgb(48,70,116);
-    border-radius: 30px;
-
-    width: 50%;
-    height: auto;
-
+.content, .review, .hours-info, .location-container {
+    border: 1px solid var(--main-border-color);
+    border-radius: var(--main-border-radius);
+    width: 75%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: var(--main-padding);
+}
 
+.content {
+    margin-top: 30px;
+    width: 50%;
     gap: 50px;
 }
-.heading{
-    color: rgb(48,70,116);
-    margin: 30px 0px 0px 0px;
+
+.heading {
+    color: var(--main-border-color);
+    margin: 30px 0 0 0;
 }
 
-.review{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 30px;
+.review {
     margin-top: 30px;
-
-    border: 1px solid rgb(48,70,116);
-    /* border: 1px solid rgb(255, 255, 255); */
-
-    border-radius: 30px;
-    width: 75%;
 }
 
-.customer{
+.customer {
     align-self: flex-end;
 }
 
-
-.hours-info{
-    border: 1px solid rgb(48,70,116);
-    border-radius: 30px;
-    width: 75%;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    padding: 20px 30px;
-
-}
-
-.hours{
+.hours {
     align-self: flex-start;
     padding-left: 5px;
 }
 
-.location-container{
-    border: 1px solid rgb(48,70,116);
-    border-radius: 30px;
+.location {
+    align-self: flex-start;
+    padding-left: 5px;
+}
+
+.hours-info, .location-container {
     width: 75%;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    padding: 20px 30px;
-
     margin-bottom: 20px;
-}
-
-.location{
-    align-self: flex-start;
-    padding-left: 5px;
-
-
 }
 
 /* content part ends  */
 
 /* menu part begins  */
-
-.menu{
+.menu {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-
     margin-bottom: 20px;
 }
 
-.item-container{
+.item-container {
     width: 50%;
-    border: 1px solid rgb(48,70,116);
-    border-radius: 30px;
+    border: 1px solid var(--main-border-color);
+    border-radius: var(--main-border-radius);
     display: flex;
     flex-direction: column;
     align-items: center;
-
     padding: 10px 30px;
     gap: 20px;
-
 }
 
-.itemhead{
+.itemhead {
     align-self: flex-start;
-
 }
 
-.item-image{
+.item-image {
     background-image: url(./asset/1.png);
     background-repeat: no-repeat;
     width: 200px;
@@ -165,17 +134,52 @@ nav>button:hover {
     height: 200px;
     align-self: flex-end;
 }
-
-
-
-
+/* menu part ends  */
 
 /* footer part begins  */
-footer{
+footer {
     margin-top: 30px;
     font-size: 12px;
     font-style: normal;
     font-weight: lighter;
     font-family: "Roboto";
-    
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .content, .review, .hours-info, .location-container, .item-container {
+        width: 90%;
+    }
+
+    .content {
+        width: 90%;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav > button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .content, .review, .hours-info, .location-container, .item-container {
+        width: 100%;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    nav > button {
+        width: 100%;
+    }
 }
