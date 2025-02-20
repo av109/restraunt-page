@@ -1,12 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
     --main-border-color: rgb(48,70,116);
-    --main-border-radius: 30px;
+    --main-border-radius: 15px;
     --main-padding: 20px 30px;
-    --main-bg-color: rgb(208, 235, 255);
-    --main-text-color: rgb(97, 91, 91);
-    --header-bg-color: rgba(87,162,194, 0.4);
+    --main-bg-color: rgba(245, 245, 245,0.5);
+    --main-text-color: rgb(33, 37, 41);
+    --header-bg-color: rgba(48, 70, 116, 0.9);
+    --button-bg-color: rgb(48, 70, 116);
+    --button-hover-bg-color: rgb(33, 37, 41);
+    --button-text-color: #fff;
+    --heading-color: rgb(48, 70, 116);
 }
 
 * {
@@ -21,36 +25,43 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-
+    background-size: cover;
+    color: var(--main-text-color);
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 100px; /* Add padding to the bottom to prevent footer overlap */
 }
 
 /* header part begins  */
 header {
     background-color: var(--header-bg-color);
     width: 100%;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
 }
 
 nav {
-    padding: 20px;
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
 nav > button {
-    padding: 5px 10px;
-    border-radius: 5px;
-    border-style: none;
-    border: 1px solid rgb(122, 158, 189);
-    background-color: var(--main-bg-color);
-    color: var(--main-text-color);
+    padding: 10px 20px;
+    border-radius: var(--main-border-radius);
+    border: none;
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
 nav > button:hover {
     cursor: pointer;
+    background-color: var(--button-hover-bg-color);
 }
 /* header part ends  */
 
@@ -63,6 +74,13 @@ nav > button:hover {
     flex-direction: column;
     align-items: center;
     padding: var(--main-padding);
+    background-color: var(--main-bg-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+.location-container {
+    margin-bottom: 40px;
 }
 
 .content {
@@ -72,26 +90,26 @@ nav > button:hover {
 }
 
 .heading {
-    color: var(--main-border-color);
+    color: var(--heading-color);
     margin: 30px 0 0 0;
+    font-size: 2em;
+    text-align: center;
 }
 
 .review {
     margin-top: 30px;
+    text-align: center;
 }
 
 .customer {
     align-self: flex-end;
+    font-style: italic;
 }
 
-.hours {
+.hours, .location {
     align-self: flex-start;
     padding-left: 5px;
-}
-
-.location {
-    align-self: flex-start;
-    padding-left: 5px;
+    font-weight: bold;
 }
 
 .hours-info, .location-container {
@@ -107,32 +125,35 @@ nav > button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     margin-bottom: 20px;
 }
 
 .item-container {
-    width: 50%;
+    width: 100%;
     border: 1px solid var(--main-border-color);
     border-radius: var(--main-border-radius);
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px 30px;
+    padding: 20px;
     gap: 20px;
+    background-color: var(--main-bg-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .itemhead {
     align-self: flex-start;
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
 .item-image {
-    background-image: url(./asset/1.png);
-    background-repeat: no-repeat;
-    width: 200px;
-    background-position: center;
+    width: 100%;
     height: 200px;
-    align-self: flex-end;
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--main-border-radius);
 }
 /* menu part ends  */
 
@@ -143,6 +164,13 @@ footer {
     font-style: normal;
     font-weight: lighter;
     font-family: "Roboto";
+    text-align: center;
+    padding: 20px;
+    background-color: var(--header-bg-color);
+    color: var(--button-text-color);
+    width: 100%;
+    position: fixed;
+    bottom: 0;
 }
 
 /* Media Queries for responsiveness */
@@ -182,4 +210,29 @@ footer {
     nav > button {
         width: 100%;
     }
+}
+
+.item-image1 {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-image: url(./asset/noodle.jpg);
+    border-radius: var(--main-border-radius);
+}
+
+.image2 {
+    background-image: url(./asset/pizza.jpg);
+}
+
+.image3 {
+    background-image: url(./asset/salad.jpg);
+}
+
+.image4 {
+    background-image: url(./asset/stake.jpg);
+}
+
+.image5 {
+    background-image: url(./asset/cake.jpg);
 }

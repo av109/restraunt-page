@@ -31,8 +31,6 @@ function createHeader() {
     body.insertAdjacentElement("afterbegin", header);
 }
 
-
-
 function loadMenuContent() {
     const content = document.querySelector(".content");
     content.innerHTML = `
@@ -45,16 +43,58 @@ function loadMenuContent() {
         <div class="menu">
             <div class="item-container">
                 <div class="itemhead">
-                    1. Hello
+                    1. Spaghetti Carbonara
                 </div>
-                <div class="item-image">
+                <div class="item-image1">
                 </div>
             </div>
             <div class="item-container">
                 <div class="itemhead">
-                    2. Hello
+                    2. Margherita Pizza
                 </div>
-                <div class="item-image">
+                <div class="item-image image2">
+                </div>
+            </div>
+            <div class="item-container">
+                <div class="itemhead">
+                    3. Caesar Salad
+                </div>
+                <div class="item-image image3">
+                </div>
+            </div>
+            <div class="item-container">
+                <div class="itemhead">
+                    4. Grilled Salmon
+                </div>
+                <div class="item-image image4">
+                </div>
+            </div>
+            <div class="item-container">
+                <div class="itemhead">
+                    5. Chocolate Cake
+                </div>
+                <div class="item-image image5">
+                </div>
+            </div>
+            <div class="item-container">
+                <div class="itemhead">
+                    6. Beef Steak
+                </div>
+                <div class="item-image" style="background-image: url('./asset/stake.jpg');">
+                </div>
+            </div>
+            <div class="item-container">
+                <div class="itemhead">
+                    7. Sushi Platter
+                </div>
+                <div class="item-image" style="background-image: url('./asset/sushi.jpg');">
+                </div>
+            </div>
+            <div class="item-container">
+                <div class="itemhead">
+                    8. Tiramisu
+                </div>
+                <div class="item-image" style="background-image: url('./asset/tiramisu.jpg');">
                 </div>
             </div>
         </div>

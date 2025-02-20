@@ -1,5 +1,5 @@
 import "./style.css";
-import { createHeader } from "./nav"; // Add a comma between createHeader and loadHomeContent
+import { createHeader } from "./nav";
 import { loadHomeContent } from "./home";
 
 createHeader();

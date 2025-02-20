@@ -77,4 +77,4 @@ function loadHomeContent() {
     content.appendChild(locationContainer);
 }
 
-export {loadHomeContent};
+export { loadHomeContent };
